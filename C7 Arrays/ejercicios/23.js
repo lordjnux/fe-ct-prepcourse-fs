@@ -9,7 +9,7 @@ function breakStatement(num) {
   let suma = num;
   let interrumpido = false;
   for (let i = 0; i < 10; i++) {
-    if ((suma == 10)){
+    if (suma == 10) {
       interrumpido = true;
       break;
     }
