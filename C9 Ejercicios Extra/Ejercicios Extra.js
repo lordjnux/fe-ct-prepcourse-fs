@@ -46,7 +46,27 @@ function capToFront(string) {
   // Retornar el string.
   // [EJEMPLO]: soyHENRY ---> HENRYsoy
   // Tu código:
-  
+  let index = 0;
+  let arrayOrdenado = [];
+
+  let arrayString = string.split("");
+
+  arrayString.forEach((letra) => {
+    if (letra == arrayString[index].toUpperCase()) {
+      arrayOrdenado.push(letra);
+    }
+    index++;
+  });
+
+  index = 0;
+  arrayString.forEach((letra) => {
+    if (letra == arrayString[index].toLowerCase()) {
+      arrayOrdenado.push(letra);
+    }
+    index++;
+  });
+
+  return arrayOrdenado.join("");
 }
 
 function asAmirror(frase) {
@@ -54,6 +74,11 @@ function asAmirror(frase) {
   // La diferencia es que cada palabra estará escrita al inverso.
   // [EJEMPLO]: "The Henry Challenge is close!"  ---> "ehT yrneH egnellahC si !esolc"
   // Tu código:
+  let arrayDePalabras = [];
+  frase.split(' ').forEach((palabra) => {
+    arrayDePalabras.push(palabra.split('').reverse().join(''));
+  });
+  return arrayDePalabras.join(' ');
 }
 
 function capicua(numero) {
