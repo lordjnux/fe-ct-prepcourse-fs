@@ -6,6 +6,12 @@ function deObjetoAarray(objeto) {
   // Estos elementos debe ser cada par clave:valor del objeto recibido.
   // [EJEMPLO]: {D: 1, B: 2, C: 3} ---> [['D', 1], ['B', 2], ['C', 3]].
   // Tu código:
+  let newArray = [];
+  Object.entries(objeto).forEach(([key, value]) => {
+    console.log(key, value);
+    newArray.push([key, value]);
+  });
+  return newArray;
 }
 
 function numberOfCharacters(string) {
@@ -14,6 +20,24 @@ function numberOfCharacters(string) {
   // Las letras deben estar en orden alfabético.
   // [EJEMPLO]: "adsjfdsfsfjsdjfhacabcsbajda" ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 }
   // Tu código:
+  var count = {};
+
+  string.split("").forEach(function (char) {
+    if (count[char]) {
+      count[char]++;
+    } else {
+      count[char] = 1;
+    }
+  });
+
+  var sortedCount = {};
+  Object.keys(count)
+    .sort()
+    .forEach(function (key) {
+      sortedCount[key] = count[key];
+    });
+
+  return sortedCount;
 }
 
 function capToFront(string) {
@@ -22,6 +46,7 @@ function capToFront(string) {
   // Retornar el string.
   // [EJEMPLO]: soyHENRY ---> HENRYsoy
   // Tu código:
+  
 }
 
 function asAmirror(frase) {
