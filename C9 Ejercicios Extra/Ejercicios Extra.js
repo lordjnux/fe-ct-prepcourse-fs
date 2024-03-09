@@ -115,6 +115,15 @@ function buscoInterseccion(array1, array2) {
   // Si no tienen elementos en común, retornar un arreglo vacío.
   // [PISTA]: los arreglos no necesariamente tienen la misma longitud.
   // Tu código:
+  let arregloUnion = [];
+  array1.forEach((elementoA1) => {
+    array2.forEach((elementoA2) => {
+      if (elementoA1 === elementoA2) {
+        arregloUnion.push(elementoA1);
+      }
+    });
+  });
+  return arregloUnion;
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
