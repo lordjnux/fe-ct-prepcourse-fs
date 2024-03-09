@@ -75,16 +75,18 @@ function asAmirror(frase) {
   // [EJEMPLO]: "The Henry Challenge is close!"  ---> "ehT yrneH egnellahC si !esolc"
   // Tu código:
   let arrayDePalabras = [];
-  frase.split(' ').forEach((palabra) => {
-    arrayDePalabras.push(palabra.split('').reverse().join(''));
+  frase.split(" ").forEach((palabra) => {
+    arrayDePalabras.push(palabra.split("").reverse().join(""));
   });
-  return arrayDePalabras.join(' ');
+  return arrayDePalabras.join(" ");
 }
 
 function capicua(numero) {
   // Si el número que recibes es capicúa debes retornar el string: "Es capicua".
   // Caso contrario: "No es capicua".
   // Tu código:
+  let numeroReversado = numero.toString().split("").toReversed().join("");
+  return numero.toString() == numeroReversado ? "Es capicua" : "No es capicua";
 }
 
 function deleteAbc(string) {
